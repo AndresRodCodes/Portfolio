@@ -1,0 +1,14 @@
+:root {
+	--primary-color: #6fb98f;
+	--secondary-color: #2c7873;
+	--accent-color: #004445;
+	--dark-color: #021c1e;
+}
+
+.navbar {
+	background-color: var(--dark-color);
+}
+
+button {
+	color: red;
+}
