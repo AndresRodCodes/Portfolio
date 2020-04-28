@@ -24,3 +24,11 @@ footer {
 	background-color: #343a40;
 	color: #9a9da0;
 }
+
+h1 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+p {
+	font-family: 'Source Sans Pro', sans-serif;
+}
