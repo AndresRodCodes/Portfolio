@@ -9,6 +9,7 @@ const app = express();
 
 // Setup view engine
 app.engine('handlebars', exphbs());
+app.set('views', './views');
 app.set('view engine', 'handlebars');
 
 // Static folder
