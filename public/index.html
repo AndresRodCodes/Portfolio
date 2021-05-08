@@ -1,89 +1,165 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.5.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.5.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.5.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.5.0/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.5.0/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.5.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.5.0/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.5.0/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.5.0/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.5.0/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <title>Andres Rodriguez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<body>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="#home">
+      <div class="border-2 px-1">AR</div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#aboutMe">About Me</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav align-right">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/Ar64" target="_blank" data-toggle="tooltip" data-placement="left" title="GitHub"><i class="fab fa-github"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/andres-rodriguez64/" target="_blank"data-toggle="tooltip" data-placement="left" title="Linked In"><i class="fab fa-linkedin"></i></a>
+        </li>
+      </ul>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  </nav>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  <!--Landing Page-->
+  <div id="home" class="jumbotron jumbotron-fluid">
+    <div class="container animated slideInLeft">
+      <h1 class="display-4">Hi there,</h1>
+      <h1 class="display-4">I'm Andres,</h1>
+      <h1 class="display-4">Web Developer</h1>
+      <p class="lead">Front-end Developer / HTML / CSS / Javascript</p>
+      <a href="#aboutMe">
+        <button id="btn-contact" class="btn btn-outline-success btn-lg">About Me</button></a>
+    </div>
+  </div>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+   <!--Portfolio-->
+  <div id="projects" class="container">
+   <div class="portfolio-container">
+     <div id="title" class="text-center">
+       <h1>Projects</h1>
+      </div>
+
+      <!--Project 1-->
+      <div class="row mt-5 mb-5">
+        <div class="col-lg-6">
+          <div class="rounded w-100 h-100">
+            <img src="assets/calorie-tracker.png" alt="Chick Norris joke generator website" class="project-image w-100 h-100">
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center mt-3">
+          <div class="project-details w-100">
+            <h1>Calorie Tracker</h1>
+            <p>Track your calorie intake in a simple way.</p>
+            <p>This application lets you add in your meal along with
+                the calories to track your calorie intake. Your data is saved to your
+                browser. You can also go back to edit or delete your previous entries at any time.
+            </p>
+            <p><em>Module Pattern | Materialize UI Framework | Javascript | State Management | Local Storage | Responsive</em></p>
+            <div class="block"><button class="btn btn-success btn-lg">Preview</button>
+              <a href="https://calorie-tracker-68bcf.web.app/" target="_blank"><button class="btn btn-outline-success">Visit Site</button></a>
+              </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      
+      <!--Project 2-->
+      <div class="row mt-5 mb-5">
+        <div class="col-lg-6">
+          <div class="rounded w-100 h-100">
+            <img src="assets/microposts.png" alt="Micro Posts Web Application" class="project-image w-100 h-100">
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center mt-3">
+          <div class="project-details w-100">
+            <h1>Micro Posts | CRUD App</h1>
+            <p>Post what's on your mind.</p>
+            <p>Microposts lets you make a post like twitter, but here you can edit 
+              your post. Therefore, it is better than twitter. All posts go to a JSON API
+              file in the project folder.
+            </p>
+            <p><em>Module Pattern | Node.js | Javascript | State Management | JSON API | Responsive</em></p>
+            <div class="block"><button class="btn btn-success btn-lg">Preview</button>
+              <button class="btn btn-outline-success">Visit Site</button></div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <br>
+
+      <!--Project 3-->
+      <div class="row mt-5 mb-5">
+        <div class="col-lg-6">
+          <div class="rounded w-100 h-100">
+            <img src="assets/chuck-norris-jokes.png" alt="Chick Norris joke generator website" class="project-image w-100 h-100">
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center mt-3">
+          <div class="project-details w-100">
+            <h1>Chuck Norris Joke Generator</h1>
+            <p>Get as many Chuck Norris jokes as your heart desires.</p>
+            <p>Dead simple Chuck Norris joke generator. Enter how many jokes you want
+              and the site will get them for you from an API.
+            </p>
+            <p><em>HTML | Skeleton Framework | Javascript | API | Responsive</em></p>
+            <div class="block"><button class="btn btn-success btn-lg">Preview</button>
+              <button class="btn btn-outline-success">Visit Site</button></div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <!--About Me-->
+  <div class="container-fluid contact-container py-5">
+    <div id="aboutMe" class="container">
+      <h1 class="text-center">About Me</h1>
+      <div class= "row mt-5 mb-5">
+        <div class="col-lg-6">
+          <div>
+            <p>My name is Andres Rodriguez, and I am excited to say I will be graduating with a <b>bachelor’s in computer science</b> with a concentration in Software Engineering at the end of June 2021. I have worked tirelessly juggling full-time employment, full-time university, and my personal life. This is also why I am proud to mention I will be graduating with a 3.9 GPA. I cannot wait to join a great software team to create projects in a professional environment and solve difficult problems.</p>
+            <p>Outside of my educational and professional goals, I enjoy conquering <b>Spartan races</b>. In 2019, I completed the Trifecta medal by completing three races, each more difficult than the last. My new goal is the Spartan Ultra. A half marathon 30 obstacle course. Mud, dirt, and water, here I come.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="rounded w-100 h-100">
+            <img src="assets/smile.jpg" alt="Chick Norris joke generator website" class="project-image w-100 h-100">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Footer-->
+  <footer>
+    <div class="pt-4 pb-4 text-center">Andres Rodriguez &copy; 2020</div>
+  </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ee5f669a5b.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
 </html>
