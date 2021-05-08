@@ -1,0 +1,42 @@
+:root {
+	--primary-color: #6fb98f;
+	--secondary-color: #2c7873;
+	--accent-color: #004445;
+	--dark-color: #021c1e;
+}
+
+.border-2 {
+	border-style: solid;
+	border-width: 2px;
+}
+
+@media only screen and (max-width: 990px) {
+	.project-details {
+		text-align: center;
+	}
+}
+
+.contact-container {
+	background-color: #e9ecef;
+}
+
+footer {
+	background-color: #343a40;
+	color: #9a9da0;
+}
+
+h1 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+p {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+img {
+	transition-duration: 0.5s;
+}
+
+img:hover {
+	transform: scale(1.1, 1.1);
+}

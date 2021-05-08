@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <title>Andres Rodriguez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  </head>
+<body>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="#home">
+      <div class="border-2 px-1">AR</div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#aboutMe">About Me</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav align-right">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/Ar64" target="_blank" data-toggle="tooltip" data-placement="left" title="GitHub"><i class="fab fa-github"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/andres-rodriguez64/" target="_blank"data-toggle="tooltip" data-placement="left" title="Linked In"><i class="fab fa-linkedin"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--Landing Page-->
+  <div id="home" class="jumbotron jumbotron-fluid">
+    <div class="container animated slideInLeft">
+      <h1 class="display-4">Hi there,</h1>
+      <h1 class="display-4">I'm Andres,</h1>
+      <h1 class="display-4">Web Developer</h1>
+      <p class="lead">Front-end Developer / HTML / CSS / Javascript</p>
+      <a href="#aboutMe">
+        <button id="btn-contact" class="btn btn-outline-success btn-lg">About Me</button></a>
+    </div>
+  </div>
+
+   <!--Portfolio-->
+  <div id="projects" class="container">
+   <div class="portfolio-container">
+     <div id="title" class="text-center">
+       <h1>Projects</h1>
+      </div>
+
+      <!--Project 1-->
+      <div class="row mt-5 mb-5">
+        <div class="col-lg-6">
+          <div class="rounded w-100 h-100">
+            <img src="assets/calorie-tracker.png" alt="Chick Norris joke generator website" class="project-image w-100 h-100">
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center mt-3">
+          <div class="project-details w-100">
+            <h1>Calorie Tracker</h1>
+            <p>Track your calorie intake in a simple way.</p>
+            <p>This application lets you add in your meal along with
+                the calories to track your calorie intake. Your data is saved to your
+                browser. You can also go back to edit or delete your previous entries at any time.
+            </p>
+            <p><em>Module Pattern | Materialize UI Framework | Javascript | State Management | Local Storage | Responsive</em></p>
+            <div class="block"><button class="btn btn-success btn-lg">Preview</button>
+              <a href="https://calorie-tracker-68bcf.web.app/" target="_blank"><button class="btn btn-outline-success">Visit Site</button></a>
+              </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      
+      <!--Project 2-->
+      <div class="row mt-5 mb-5">
+        <div class="col-lg-6">
+          <div class="rounded w-100 h-100">
+            <img src="assets/microposts.png" alt="Micro Posts Web Application" class="project-image w-100 h-100">
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center mt-3">
+          <div class="project-details w-100">
+            <h1>Micro Posts | CRUD App</h1>
+            <p>Post what's on your mind.</p>
+            <p>Microposts lets you make a post like twitter, but here you can edit 
+              your post. Therefore, it is better than twitter. All posts go to a JSON API
+              file in the project folder.
+            </p>
+            <p><em>Module Pattern | Node.js | Javascript | State Management | JSON API | Responsive</em></p>
+            <div class="block"><button class="btn btn-success btn-lg">Preview</button>
+              <button class="btn btn-outline-success">Visit Site</button></div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <br>
+
+      <!--Project 3-->
+      <div class="row mt-5 mb-5">
+        <div class="col-lg-6">
+          <div class="rounded w-100 h-100">
+            <img src="assets/chuck-norris-jokes.png" alt="Chick Norris joke generator website" class="project-image w-100 h-100">
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center mt-3">
+          <div class="project-details w-100">
+            <h1>Chuck Norris Joke Generator</h1>
+            <p>Get as many Chuck Norris jokes as your heart desires.</p>
+            <p>Dead simple Chuck Norris joke generator. Enter how many jokes you want
+              and the site will get them for you from an API.
+            </p>
+            <p><em>HTML | Skeleton Framework | Javascript | API | Responsive</em></p>
+            <div class="block"><button class="btn btn-success btn-lg">Preview</button>
+              <button class="btn btn-outline-success">Visit Site</button></div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <!--About Me-->
+  <div class="container-fluid contact-container py-5">
+    <div id="aboutMe" class="container">
+      <h1 class="text-center">About Me</h1>
+      
+    </div>
+  </div>
+
+  <!--Footer-->
+  <footer>
+    <div class="pt-4 pb-4 text-center">Andres Rodriguez &copy; 2020</div>
+  </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ee5f669a5b.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
